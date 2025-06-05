@@ -1,0 +1,339 @@
+/* ===================================
+   Global & General Styling
+===================================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #e5e5e5;
+}
+
+/* ===================================
+   Professional Sticky Header
+===================================== */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255,0,150,0.5), rgba(0,229,255,0.5));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Navigation */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.nav-item a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  padding: 8px 12px;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0088cc;
+}
+
+/* ===================================
+   Search Section
+===================================== */
+.search-section {
+  text-align: center;
+  margin: 30px;
+}
+
+#searchInput {
+  width: 60%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: width 0.4s, box-shadow 0.4s;
+}
+
+#searchInput:focus {
+  width: 70%;
+  box-shadow: 0 0 15px rgba(0,229,255,0.5);
+}
+
+/* ===================================
+   Category Filter Styles
+===================================== */
+.category-filter {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.category-filter .filter-btn {
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 5px;
+}
+
+.category-filter .filter-btn.active,
+.category-filter .filter-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   App List & Cards
+===================================== */
+.app-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  margin: 15px;
+  position: relative;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: filter 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,229,255,0.7);
+}
+
+.card:hover img {
+  filter: drop-shadow(0 0 15px rgba(255,0,150,0.7));
+}
+
+/* ===================================
+   Download Button with Pulsate Animation
+===================================== */
+.download-button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255,75,75,0.8);
+  animation: pulse 1s infinite;
+}
+
+/* ===================================
+   Floating Buttons for Telegram & Support
+===================================== */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.floating-buttons a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,229,255,0.6);
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.telegram-button {
+  background: linear-gradient(90deg, #0088cc, #005f99);
+}
+
+.support-button {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+/* ===================================
+   Footer Styling
+===================================== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ===================================
+   Keyframe Animations
+===================================== */
+@keyframes fadeInDown {
+  0%   { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 15px rgba(255,75,75,0.8); }
+  50%  { box-shadow: 0 0 25px rgba(255,75,75,1); }
+  100% { box-shadow: 0 0 15px rgba(255,75,75,0.8); }
+}
+
+/* ===================================
+   Mobile Responsiveness (Mod Preview Compact)
+===================================== */
+@media screen and (max-width: 768px) {
+  .app-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+  }
+
+  .card img {
+    width: 70px;
+    margin-bottom: 5px;
+  }
+
+  .card h3 {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+
+  .card p {
+    font-size: 0.85em;
+    line-height: 1.2;
+    margin: 5px 0;
+  }
+
+  .download-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #searchInput {
+    width: 80%;
+  }
+}
